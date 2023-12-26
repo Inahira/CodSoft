@@ -9,60 +9,255 @@ body{
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.header {
-    display: flex;
-    width: 93%;
-    padding: 0 15px;
-    margin: 20px;
-}
-.logo {
-    width: 10%;
-    left: 0%;
-    color: #fff;
-}
-.nav {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    float: right;
-    right: 5%;
-}
-.nav a {
-    padding:0 10px;
-    text-decoration: none;
-    color: #fff;
-    float: left;
-}
-.nav-btn {
-    width: 10%;
-}
-.nav-btn button {
-    padding: 10px;
-    border-radius: 80px;
-    background-color: rgb(6, 53, 83);
-    border-color: rgb(6, 53, 83);
-    color: #fff;
-    text-decoration: none;
-}
-.nav-btn button:hover {
-    background-color: #fff;
-    color: rgb(6, 53, 83);
-    transition: 3ms ease;
-}
-.home {
+header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15%;
-    height: 100vh;
-    justify-content: center;
+    background: transparent; /* Adjust opacity as needed */
+    backdrop-filter: blur(8px); /* For background blur effect */
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
 }
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-right: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #ff00ff; /* Change to desired hover color */
+  }
+  
+  .join-btn {
+    padding: 10px 20px;
+    background-color: #ff00ff; /* Change to desired button color */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .join-btn:hover {
+    background-color: transparent;
+    color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff; /* Change to desired glow effect */
+    transition: .15s ease-in-out;
+  }
+  .home {
+    margin-top: 5%;
+    text-align: center;
+    color: #000;
+    padding: 10%;
+    height: 100vh;
+}
+
+.home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    margin-top: 5%;
+}
+
+.home p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.home button {
+    padding: 10px 20px;
+    background-color: #ff00ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home button:hover {
+    background-color: transparent;
+    color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+/*styling for services section*/
+/* Your existing styles */
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+  
+.service-card {
+    width: calc(30% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    animation: glow 1s infinite alternate;
+}
+  
+  .service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Add glowing effect on hover */
+  .service-card:hover {
+    animation: glow 1s infinite alternate;
+  }
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px #ff00ff; /* Change to desired glow color */
+    }
+    100% {
+      box-shadow: 0 0 20px #ff00ff; /* Change to desired glow color */
+    }
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .service-card {
+      width: calc(50% - 20px); /* Adjust card width for smaller screens */
+    }
+  }
+  
+
 .about {
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     height: 100vh;
+}
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.about-content p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Add glowing effect */
+.about-content:hover {
+  animation: glow 1s infinite alternate;
+}
+
+.services {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vh;
 }
 .section-heading, .section-disc, .section-btn {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
+
+/* contact form styling*/
+
+.contact-section {
+    background: rgba(36, 54, 54, 0.61); /* Adjust opacity as needed */
+    backdrop-filter: blur(8px); /* For background blur effect */
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  
+  .contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff00ff; /* Change to desired button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    box-shadow: 0 0 10px #ff00ff; /* Change to desired glow effect */
+  }
+  
+
+
+
+footer {
+    background-color: rgb(27, 41, 41); /* Change to desired background color */
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px; /* Adjust font size as needed */
+  }
